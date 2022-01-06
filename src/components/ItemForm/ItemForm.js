@@ -1,11 +1,20 @@
 import './ItemForm.css';
+import { useState } from 'react';
 
 const ItemForm = () => {
+  const [currentListItem, setCurrentListItem] = useState('')
 
   return (
-    <div>
+    <form>
       <p>item form</p>
-    </div>
+      <input 
+        className='text-input'
+        name='currentListItem'
+        value={currentListItem}
+        onChange={() => setCurrentListItem(currentListItem)}
+      />
+      <button>Add To List</button>
+    </form>
   )
 }
 
